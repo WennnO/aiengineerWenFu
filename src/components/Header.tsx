@@ -67,6 +67,19 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             LinkedIn
           </a> - My LinkedIn Page
         </p>
+        <p className="text-xs sm:text-sm mt-1">
+          <a 
+            href="https://www.linkedin.com/school/pmaccelerator/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${
+              theme === 'light' ? 'text-blue-600 hover:text-blue-800' : 'text-blue-400 hover:text-blue-300'
+            }`}
+          >
+            PM Accelerator
+          </a> <br /> From entry-level to VP of Product, we support PM professionals through every stage of their careers. <br />The Product Manager Accelerator Program is designed to support PM professionals through every stage of their careers. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.
+
+        </p>
       </div>
     </header>
   );

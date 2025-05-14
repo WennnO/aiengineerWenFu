@@ -8,14 +8,14 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
   return (
-    <header className="mb-8">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center">
+    <header className="mb-4 md:mb-8">
+      <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex items-center mb-3 sm:mb-0">
           <CloudSun 
-            size={40} 
-            className={`mr-2 ${theme === 'light' ? 'text-blue-600' : 'text-blue-400'}`} 
+            size={32} 
+            className={`mr-2 ${theme === 'light' ? 'text-blue-600' : 'text-blue-400'} sm:size-40`} 
           />
-          <h1 className={`text-3xl font-bold ${
+          <h1 className={`text-2xl sm:text-3xl font-bold ${
             theme === 'light' ? 'text-slate-800' : 'text-white'
           }`}>
             Weather Forecast
@@ -37,23 +37,35 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
           )}
         </button>
       </div>
-      <div className={`mt-4 p-4 rounded-lg ${
+      <div className={`mt-4 p-3 sm:p-4 rounded-lg ${
         theme === 'light' ? 'bg-white/70 text-slate-700' : 'bg-slate-800 text-slate-200'
       }`}>
-        <p className="text-sm">
-          Created by Your Name - AI Engineer Intern Technical Assessment
+        <p className="text-xs sm:text-sm">
+          Created by Wen Fu - AI Engineer Intern Technical Assessment
         </p>
-        <p className="text-sm mt-1">
+        <p className="text-xs sm:text-sm mt-1">
           <a 
-            href="https://www.linkedin.com/company/product-manager-accelerator/"
+            href="https://github.com/WennnO"
             target="_blank"
             rel="noopener noreferrer"
             className={`${
               theme === 'light' ? 'text-blue-600 hover:text-blue-800' : 'text-blue-400 hover:text-blue-300'
             }`}
           >
-            Product Manager Accelerator
-          </a> - Accelerating the growth and development of future product leaders through hands-on experience.
+            GitHub
+          </a> - My GitHub Page
+        </p>
+        <p className="text-xs sm:text-sm mt-1">
+          <a 
+            href="https://www.linkedin.com/in/fu-wen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${
+              theme === 'light' ? 'text-blue-600 hover:text-blue-800' : 'text-blue-400 hover:text-blue-300'
+            }`}
+          >
+            LinkedIn
+          </a> - My LinkedIn Page
         </p>
       </div>
     </header>
